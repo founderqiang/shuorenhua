@@ -1,5 +1,36 @@
 # Changelog
 
+## [1.8.3] - 2026-05-09 — Community Intake Round 1 / 首次实战
+
+### Added
+- `evals/benchmark.md` 新增 4 条用例（62 → 66 条，35 SF + 27 SNF → 38 SF + 28 SNF）：
+  - `SF-36`：路径正确性认证（`已经走在正确的路上了 / 走得很稳`），身份认证式夸奖在"对你的进度"维度上的延伸
+  - `SF-37`：对人本身发证书（`说明你已经超越绝大部分人了 / 你已经具备做这件事的实力了`），SF-31 同族新变体
+  - `SF-38`：庸医问诊腔变体（`掰扯清楚 / 彻底掰开说清楚`），归并到 `references/phrases-zh.md` 「庸医问诊腔」族
+  - `SNF-28`：技术语境里的"落盘"放行（宾语是 `重构方案 / 三份文档` 这类具体技术对象），规则同 v1.7.3 的 `接住` 按宾语判断
+
+### Changed
+- `references/operation-manual.md` 4 处补充（按"模式优先、词条兜底"原则，主要规则更新落在 manual 边界，不新增 phrases-zh 词条）：
+  - 5.2 节「过度接住 / 心理判断腔」补 `你现在的 X 很正常` 心理判断变体
+  - 5.2 节补 `抱住 / 紧紧抱住 / 拥抱 / 实实在在的抱住你这种想法` 同类抚慰动词归并提示
+  - 第 3 节「工程师腔」补 `落 X / 把 X 落下去 / 落到` 万能动词边界（按宾语区分姿态层 vs 技术对象）
+  - 第 7 节「价值拔高骨架」补 `你看完会彻底开悟 / 看完就懂了 / 看完会震惊 / 看完不再 X` 承诺式收尾
+- `evals/run-eval.md` 同步评测口径：SF 范围 → `01–38`，SNF 范围 → `01–28`，总数 → `66`
+- `README.md` 同步状态徽章、状态表、评测表、项目结构里的 benchmark 数量（62 → 66），版本号 → `v1.8.3`
+- `evals/real-samples.md` 同步 benchmark 计数（62 → 66）：元数据对比表（"benchmark vs real-samples 分工"）+ RS-10 推荐改法演示文本，样本本身和数量（18 条）不变
+- `references/phrases-zh.md` 工程师腔族升级 `落盘 / 已经落下去` 两条已有词条为按宾语判断（沿用 v1.7.3 `接住` 的处理方式），让 SNF-28 在单加载词表的评测路径上也能正确放行；不新增词条
+
+### Tested
+- 2026-05-09 用 v1.8.2 引入的 intake automation 跑了首次真实 community intake：10 条样本批次 → 报告归类 `已覆盖 3 / 变体归并 13 / 候选新模式 2`，落到 `tasks/current/intake/reports/2026-05-09-intake.md`（local-only）
+- intake 报告自身守住"已覆盖 → 无动作"边界：3 条已覆盖样本（包括接住体长版样板、元讨论保护、`You're absolutely right!`）全部按现有规则放行，没有被推到候选新模式
+- 新增 4 条 benchmark 静态复核：在更新后的 `operation-manual.md` 下，SF-36/37/38 命中身份认证 / 庸医问诊腔规则；SNF-28 在工程师腔的"落 X 按宾语判断"新边界下应放行
+
+### Notes
+- 本版坚持 v1.8.2 intake 协议的"模式优先、词条兜底"：**不新增** `references/phrases-zh.md` 词条；只升级已有 `落盘 / 已经落下去` 两条的判断口径（同 v1.7.3 `接住`），其余规则更新落在 `operation-manual.md` 的边界说明上
+- 2 个候选新模式（末尾二选一追问 / narrator 自夸式自我演绎）按 `automation/README.md:62-64` 协议，先记录在 intake 报告里观察 2-3 轮，确认是否反复出现再考虑入库；本版不立即落库
+- 本轮 intake 也是 v1.8.2 工具链首次脱离 dryrun 跑真实社区样本，验证了"先 intake 报告 → 人工确认 → 才动文件"的工作流可走通
+- 不动 `references/structures.md`、`SKILL.md`；`evals/real-samples.md` 仅做计数同步，样本本体和数量（18 条）不变；`references/phrases-zh.md` 仅升级 `落盘 / 已经落下去` 两条已有词条的判断口径，不新增词条
+
 ## [1.8.2] - 2026-05-01 — Intake Automation / 维护者侧反馈闭环
 
 ### Added
