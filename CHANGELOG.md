@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.8.4] - 2026-05-17 — Maintenance Surface / 维护入口对齐
+
+### Added
+- 新增 `.github/ISSUE_TEMPLATE/bad-case.md`，给“改完还是像 AI”的反馈留一个结构化入口，固定收集原文、使用方式、场景、问题点、不可改坏内容和期望方向。
+- `CONTRIBUTING.md` 新增 bad case 提交说明，明确脱敏和授权边界。
+
+### Changed
+- `README.md` 最新版本说明更新到 `v1.8.4`，并把 lite / full 的安装口径写清楚：lite 是只加载 `SKILL.md`，full 是 `SKILL.md` + `references/`。
+- `install/` 下各平台安装文档统一 lite / full 表述，避免不同入口对“只放 `SKILL.md` 还是带 `references/`”给出相互矛盾的建议。
+
+### Notes
+- 本版不改 `SKILL.md`、`references/`、`evals/benchmark.md` 或评测口径；它是维护入口和分发准备版本，不是规则能力扩张。
+- 本地 `tasks/current/roadmap-v1.8-v2.0.md` 已同步到当前维护状态；`tasks/` 仍保持 local-only，不进入公开发布面。
+
 ## [1.8.3] - 2026-05-09 — Community Intake Round 1 / 首次实战
 
 ### Added

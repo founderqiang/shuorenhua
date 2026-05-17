@@ -47,7 +47,7 @@
 
 | 项 | 当前状态 |
 |----|----------|
-| 最新版本 | `v1.8.3`，首次 community intake 实战，新增 4 条 benchmark 和 4 处 operation-manual 边界 |
+| 最新版本 | `v1.8.4`，维护入口和分发准备：bad-case 模板、安装口径和本地路线图对齐 |
 | 规则覆盖 | 210+ 中文短语、96 条英文短语、19 类结构反模式 |
 | 评测集 | 66 条 benchmark：38 条该改，28 条不该误杀 |
 | 真实样本 | 18 条整段样本，评估自然、保真、可直接发 |
@@ -76,7 +76,7 @@ codex exec -C . "读取 ./SKILL.md，按其中规则改写以下文本：..."
 codex exec -C . "读取 ./SKILL.md，只按 annotation mode（只标注不改写）标出下面这段文字里的问题：..."
 ```
 
-长期使用建议加载完整包：`SKILL.md` + `references/`。只加载 `SKILL.md` 可以临时用，但场景判断、误杀防护和 v1.8.0 的 Scene Packs 都会弱很多。
+长期使用建议加载完整包：`SKILL.md` + `references/`。只加载 `SKILL.md` 是 lite 用法，适合临时改写或上下文紧张；full 用法更适合长期项目、公开文本、技术文档和需要误杀防护的场景。
 
 ## 场景能力
 
@@ -247,7 +247,7 @@ shuorenhua/
 └── LICENSE                   # MIT
 ```
 
-核心只需要 `SKILL.md` 一个文件；完整体验建议同时带上 `references/`。
+核心只需要 `SKILL.md` 一个文件；完整体验建议同时带上 `references/`。本项目把这两种用法分别叫作 lite 和 full。
 
 ## Star History
 
@@ -274,6 +274,8 @@ shuorenhua/
 ## 贡献
 
 欢迎提交新的评测样本、边界案例、真实问题案例、改写前后样本和误杀防护。
+
+如果你遇到“改完还是像 AI”的具体文本，可以用 [bad case 模板](.github/ISSUE_TEMPLATE/bad-case.md) 提交。请先脱敏，不要贴未授权私聊全文、密钥、内部链接或真实个人身份信息。
 
 在提交新词之前，先想一件事：
 

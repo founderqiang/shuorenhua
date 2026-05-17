@@ -73,6 +73,18 @@
 - 如果只是词表里的同义变体，通常不需要同时改 `phrases` 和 `benchmark`
 - 涉及无源引用、mixed 场景、被讨论词、系统主语这类容易误杀的边界，默认优先加 benchmark
 
+## 提交 bad case
+
+如果你遇到“改完还是像 AI”的真实案例，优先用 GitHub 的 [bad case 模板](.github/ISSUE_TEMPLATE/bad-case.md) 提交。模板会要求你写清楚：
+
+- 原文或已脱敏片段
+- 使用工具和加载方式：`lite`（只加载 `SKILL.md`）或 `full`（`SKILL.md` + `references/`）
+- 场景：`chat / status / docs / public-writing / code-context / mixed`
+- 你觉得哪里仍然不自然
+- 哪些事实、术语、命令、引用或责任主体不能改坏
+
+不要提交未授权的私聊全文、敏感信息、账号、密钥、内部链接或真实个人身份信息。公开仓库里的 bad case 应优先是脱敏片段、公开来源观察，或经过授权的样本。
+
 ## PR 规范
 
 1. 一个 PR 只做一件事（加短语、加结构、加评测用例、改文档）

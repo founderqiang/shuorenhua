@@ -1,5 +1,10 @@
 # Codex 安装 / 使用
 
+## lite / full 怎么选
+
+- `lite`：只加载 `SKILL.md`。适合单次临时改写、上下文紧张、只想先压掉明显模板感的场景。
+- `full`：加载 `SKILL.md` + `references/`。适合长期项目、README / release note / issue 回复、技术文档和需要误杀防护的场景。
+
 ## 方式 1：项目内长期使用（推荐）
 
 把 skill 文件放进项目：
@@ -9,6 +14,8 @@ mkdir -p shuorenhua
 cp SKILL.md shuorenhua/
 cp -r references shuorenhua/
 ```
+
+这是 full 用法，也是项目内长期使用的默认建议。
 
 在 `AGENTS.md` 里写清楚触发条件和适用边界：
 
@@ -28,7 +35,7 @@ cp -r references shuorenhua/
 codex exec -C . "读取 ./SKILL.md，按其中规则改写以下文本：..."
 ```
 
-不需要修改项目文件，适合临时使用。
+不需要修改项目文件，适合临时使用。这是 lite 用法；如果要处理公开文本、技术边界或 Scene Packs，建议同时让 Codex 读取 `references/` 下的相关文件。
 
 如果你想先判断“哪里像 AI”，不要直接改稿，可以这样用：
 
@@ -51,6 +58,8 @@ mkdir -p ~/.codex/skills/shuorenhua
 cp SKILL.md ~/.codex/skills/shuorenhua/
 cp -r references ~/.codex/skills/shuorenhua/
 ```
+
+这是 full 用法。只复制 `SKILL.md` 也能用，但误杀防护和场景细分会弱一些。
 
 再在全局 `AGENTS.md` 里写触发入口：
 
