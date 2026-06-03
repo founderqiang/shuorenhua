@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/MrGeDiao/shuorenhua/stargazers"><img src="https://img.shields.io/github/stars/MrGeDiao/shuorenhua?style=for-the-badge" alt="GitHub stars"></a>
+  <a href="https://github.com/MrGeDiao/shuorenhua/stargazers"><img src="https://img.shields.io/github/stars/MrGeDiao/shuorenhua?style=for-the-badge&amp;label=stars" alt="GitHub stars"></a>
   <a href="https://github.com/MrGeDiao/shuorenhua/releases"><img src="https://img.shields.io/github/v/release/MrGeDiao/shuorenhua?style=for-the-badge&amp;label=release" alt="GitHub release"></a>
   <a href="evals/benchmark.md"><img src="https://img.shields.io/badge/benchmark-72%20cases-2563eb?style=for-the-badge" alt="Benchmark: 72 cases"></a>
   <a href="evals/real-samples.md"><img src="https://img.shields.io/badge/real%20samples-19-16a34a?style=for-the-badge" alt="Real samples: 19"></a>
