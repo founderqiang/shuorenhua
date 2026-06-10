@@ -246,7 +246,7 @@ v1.8.6 起引入模型实跑（Codex + Claude 双模型，见 [evals/results-v1.
 
 欢迎提交新的评测样本、边界案例、真实问题案例、改写前后样本和误杀防护。
 
-如果你遇到“改完还是像 AI”的具体文本，可以用 [bad case 模板](.github/ISSUE_TEMPLATE/bad-case.md) 提交。请先脱敏，不要贴未授权私聊全文、密钥、内部链接或真实个人身份信息。
+如果你遇到“改完还是像 AI”的具体文本，可以用 [bad case 模板](.github/ISSUE_TEMPLATE/bad-case.md) 提交。请先脱敏，不要贴未授权私聊全文、密钥、内部链接或真实个人身份信息。也可以直接贴到[征集 issue](https://github.com/MrGeDiao/shuorenhua/issues/5)。
 
 在提交新词之前，先想一件事：
 
